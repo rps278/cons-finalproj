@@ -1,0 +1,2 @@
+This truffle project is to be deployed under testrpc
+on port 8545
