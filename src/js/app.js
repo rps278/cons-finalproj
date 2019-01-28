@@ -204,7 +204,7 @@ App = {
           var account = accounts[0];
           App.contracts.MarketPlace.deployed().then(function(instance) {
               marketplaceInstance = instance;
-              return marketplaceInstance.registerStoreFront(storeName,{from: account, gas:_gasLimit});
+              return marketplaceInstance.registerStoreFront({from: account, gas:_gasLimit});
             }).then(function(sucess){
 
             });
