@@ -1,0 +1,555 @@
+{
+  "contractName": "PriceCalculatorLib",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "price",
+          "type": "uint256"
+        }
+      ],
+      "name": "calculateShippingCharge",
+      "outputs": [
+        {
+          "name": "shippingCharge",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function",
+      "signature": "0xf87941c9"
+    }
+  ],
+  "bytecode": "0x60e261002f600b82828239805160001a6073146000811461001f57610021565bfe5b5030600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600436106056576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063f87941c914605b575b600080fd5b608460048036036020811015606f57600080fd5b8101908080359060200190929190505050609a565b6040518082815260200191505060405180910390f35b6000606482111560ac576014905060b1565b600590505b91905056fea165627a7a72305820bdb93493796b5878b84574335f1abc87b3f22327a82feb35f6ec6c4393006dd90029",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600436106056576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063f87941c914605b575b600080fd5b608460048036036020811015606f57600080fd5b8101908080359060200190929190505050609a565b6040518082815260200191505060405180910390f35b6000606482111560ac576014905060b1565b600590505b91905056fea165627a7a72305820bdb93493796b5878b84574335f1abc87b3f22327a82feb35f6ec6c4393006dd90029",
+  "sourceMap": "25:180:3:-;;132:2:-1;166:7;155:9;146:7;137:37;252:7;246:14;243:1;238:23;232:4;229:33;270:1;265:20;;;;222:63;;265:20;274:9;222:63;;298:9;295:1;288:20;328:4;319:7;311:22;352:7;343;336:24",
+  "deployedSourceMap": "25:180:3:-;;;;;;;;;;;;;;;;;;;;;;;;;;;55:148;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;55:148:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;121:19;159:3;151:5;:11;147:51;;;176:2;169:9;;;;147:51;197:1;190:8;;55:148;;;;:::o",
+  "source": "pragma solidity ^0.5.0;\n\nlibrary PriceCalculatorLib {\n\tfunction calculateShippingCharge(uint price) public pure returns (uint shippingCharge)\n\t{\n\t\tif (price > 100 ) \n\t\t\treturn 20;\n\t\telse\n\t\t\treturn 5; \n\t}\n}",
+  "sourcePath": "/home/rps278/consensus-blockchain/finalproject/finale/contracts/PriceCalculatorLib.sol",
+  "ast": {
+    "absolutePath": "/home/rps278/consensus-blockchain/finalproject/finale/contracts/PriceCalculatorLib.sol",
+    "exportedSymbols": {
+      "PriceCalculatorLib": [
+        900
+      ]
+    },
+    "id": 901,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 883,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 900,
+        "linearizedBaseContracts": [
+          900
+        ],
+        "name": "PriceCalculatorLib",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 898,
+              "nodeType": "Block",
+              "src": "143:60:3",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 892,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 890,
+                      "name": "price",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 885,
+                      "src": "151:5:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "313030",
+                      "id": 891,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "159:3:3",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_100_by_1",
+                        "typeString": "int_const 100"
+                      },
+                      "value": "100"
+                    },
+                    "src": "151:11:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "hexValue": "35",
+                      "id": 895,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "197:1:3",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_5_by_1",
+                        "typeString": "int_const 5"
+                      },
+                      "value": "5"
+                    },
+                    "functionReturnParameters": 889,
+                    "id": 896,
+                    "nodeType": "Return",
+                    "src": "190:8:3"
+                  },
+                  "id": 897,
+                  "nodeType": "IfStatement",
+                  "src": "147:51:3",
+                  "trueBody": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "hexValue": "3230",
+                      "id": 893,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "176:2:3",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_20_by_1",
+                        "typeString": "int_const 20"
+                      },
+                      "value": "20"
+                    },
+                    "functionReturnParameters": 889,
+                    "id": 894,
+                    "nodeType": "Return",
+                    "src": "169:9:3"
+                  }
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 899,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "calculateShippingCharge",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 886,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 885,
+                  "name": "price",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 899,
+                  "src": "88:10:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 884,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "88:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "87:12:3"
+            },
+            "returnParameters": {
+              "id": 889,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 888,
+                  "name": "shippingCharge",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 899,
+                  "src": "121:19:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 887,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "121:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "120:21:3"
+            },
+            "scope": 900,
+            "src": "55:148:3",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 901,
+        "src": "25:180:3"
+      }
+    ],
+    "src": "0:205:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/rps278/consensus-blockchain/finalproject/finale/contracts/PriceCalculatorLib.sol",
+    "exportedSymbols": {
+      "PriceCalculatorLib": [
+        900
+      ]
+    },
+    "id": 901,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 883,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 900,
+        "linearizedBaseContracts": [
+          900
+        ],
+        "name": "PriceCalculatorLib",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 898,
+              "nodeType": "Block",
+              "src": "143:60:3",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 892,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 890,
+                      "name": "price",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 885,
+                      "src": "151:5:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "313030",
+                      "id": 891,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "159:3:3",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_100_by_1",
+                        "typeString": "int_const 100"
+                      },
+                      "value": "100"
+                    },
+                    "src": "151:11:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "hexValue": "35",
+                      "id": 895,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "197:1:3",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_5_by_1",
+                        "typeString": "int_const 5"
+                      },
+                      "value": "5"
+                    },
+                    "functionReturnParameters": 889,
+                    "id": 896,
+                    "nodeType": "Return",
+                    "src": "190:8:3"
+                  },
+                  "id": 897,
+                  "nodeType": "IfStatement",
+                  "src": "147:51:3",
+                  "trueBody": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "hexValue": "3230",
+                      "id": 893,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "176:2:3",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_20_by_1",
+                        "typeString": "int_const 20"
+                      },
+                      "value": "20"
+                    },
+                    "functionReturnParameters": 889,
+                    "id": 894,
+                    "nodeType": "Return",
+                    "src": "169:9:3"
+                  }
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 899,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "calculateShippingCharge",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 886,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 885,
+                  "name": "price",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 899,
+                  "src": "88:10:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 884,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "88:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "87:12:3"
+            },
+            "returnParameters": {
+              "id": 889,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 888,
+                  "name": "shippingCharge",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 899,
+                  "src": "121:19:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 887,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "121:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "120:21:3"
+            },
+            "scope": 900,
+            "src": "55:148:3",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 901,
+        "src": "25:180:3"
+      }
+    ],
+    "src": "0:205:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {
+    "1548633232283": {
+      "events": {},
+      "links": {},
+      "address": "0x86e2D2466A8D50875746455399fA364667ed7dD0",
+      "transactionHash": "0x45c0e7a9b9a9fbbb0f194a767ea4df041dea5c3dacdb43cd1f2805c01dbb024d"
+    },
+    "1548635752183": {
+      "events": {},
+      "links": {},
+      "address": "0xbEDFbCd09c67be2e2fa0ec385f5c5c9FE328edAE",
+      "transactionHash": "0x45c0e7a9b9a9fbbb0f194a767ea4df041dea5c3dacdb43cd1f2805c01dbb024d"
+    },
+    "1548636177251": {
+      "events": {},
+      "links": {},
+      "address": "0xCE93C954f5501fb41D9e2Fac9be23B392533D3F8",
+      "transactionHash": "0x45c0e7a9b9a9fbbb0f194a767ea4df041dea5c3dacdb43cd1f2805c01dbb024d"
+    },
+    "1548638642632": {
+      "events": {},
+      "links": {},
+      "address": "0x4aA4cF4413d546d2bBd99EBfb39A4cffbF5c1072",
+      "transactionHash": "0xb3f2bdcb24df971ced6fcef0ed2c2938105b943429e6b8be113dcbd4313c026e"
+    },
+    "1548639995186": {
+      "events": {},
+      "links": {},
+      "address": "0x7b0D84897D08D6FA0fE49bb31c89678Be69c08bf",
+      "transactionHash": "0xb3f2bdcb24df971ced6fcef0ed2c2938105b943429e6b8be113dcbd4313c026e"
+    },
+    "1548640342408": {
+      "events": {},
+      "links": {},
+      "address": "0x9abB2BF2DFDa9c8F4A152ECbED029376340060f6",
+      "transactionHash": "0xb3f2bdcb24df971ced6fcef0ed2c2938105b943429e6b8be113dcbd4313c026e"
+    },
+    "1548644322347": {
+      "events": {},
+      "links": {},
+      "address": "0x896674b9CD7e0e7F494962E157575878A000b7d9",
+      "transactionHash": "0x694dc6ebf5164e462c5d6cff3a449585adf6e78d57eee5ebb3f4e7b1dde67942"
+    },
+    "1548644876411": {
+      "events": {},
+      "links": {},
+      "address": "0x1b44A4b5CF3cF9674d70d8B45cDf2B8B3154fAeC",
+      "transactionHash": "0x694dc6ebf5164e462c5d6cff3a449585adf6e78d57eee5ebb3f4e7b1dde67942"
+    }
+  },
+  "schemaVersion": "3.0.1",
+  "updatedAt": "2019-01-28T03:10:26.480Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
